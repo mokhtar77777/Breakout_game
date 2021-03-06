@@ -41,8 +41,9 @@ trigger_counter()
 
 screen.onkeypress(key="Right", fun=paddle.move_right)
 screen.onkeypress(key="Left", fun=paddle.move_left)
-while True:
-    time.sleep(0.001)
+total_number_of_turtles = len(layers_of_turtle.turtles)
+while score_board.score < total_number_of_turtles:
+    time.sleep(0.01)
     screen.update()
     ball.move()
     for segment in paddle.segments_of_paddle:

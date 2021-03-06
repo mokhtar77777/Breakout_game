@@ -11,7 +11,7 @@ class Ball(Turtle):
         self.penup()
         self.kx = 0
         self.generate_random_direction()
-        self.ky = 2
+        self.ky = 5
 
     def move(self):
         x = self.xcor()
@@ -31,4 +31,4 @@ class Ball(Turtle):
     def generate_random_direction(self):
         self.kx = 0
         while self.kx == 0:
-            self.kx = random.randint(-1, 1)
+            self.kx = random.randint(-3, 3)
